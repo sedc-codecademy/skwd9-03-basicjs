@@ -1,0 +1,22 @@
+.center-block{
+    position: fixed;
+    right: 45%;
+}
+
+.kopce{
+    position: fixed;
+    top: 80%;
+    right: 50%;
+}
+
+#keyboard{
+    position: fixed;
+    top: 65%;
+    left:3%;
+}
+
+.guessingPlace{
+    position: fixed;
+    top: 50%;
+    left: 45%;
+}
