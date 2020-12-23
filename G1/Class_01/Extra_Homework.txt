@@ -1,0 +1,12 @@
+Extra homework as requested:
+
+1. Calculate the reminder of two numbers.
+
+2. The farm problem:
+  - Given 3 types of animals: Chickens, Cows and Pigs
+  - Chickens has two legs, cows and piges 4 each.
+Given exact number of chickens, cows and pigs calculate the total number of legs of all chickens, cows and pigs sepratately and then calculate total legs on all animals.
+
+3. Given two sides of rectangle a and b calculate the perimeter of the rectangle. (Not area but perimeter).
+
+4. Calculate the height of equilateral triangle. (Ramnostran triagolnik).
