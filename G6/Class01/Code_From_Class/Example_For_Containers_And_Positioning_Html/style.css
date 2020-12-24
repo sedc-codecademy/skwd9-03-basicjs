@@ -1,0 +1,27 @@
+.container {
+    width: 400px;
+    height: 400px;
+    margin: 50px auto;
+    background-color: yellow;
+    border: 2px solid black;
+    position: relative;
+}
+
+.container > div {
+    background-color: skyblue;
+    border: 2px solid black;
+    width: 150px;
+    height:150px;
+}
+
+.first {
+    position: absolute;
+    right:0;
+    bottom: 0;
+}
+
+.third {
+    position: absolute;
+    right: 0;
+    bottom: 150px;
+}
