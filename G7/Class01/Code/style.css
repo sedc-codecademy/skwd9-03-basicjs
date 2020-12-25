@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --color-dark: #130f40;
+  --color-light: #7ed6df;
+  --color-light-2: #dff9fb;
+  --color-yellow: #f9ca24;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.6rem;
+  background-color: var(--color-dark);
+  color: var(--color-light-2);
+  align-items: center;
+}
+
+.header__brand {
+  font-size: 3.6rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.header__brand:hover {
+  transform: scale(1.1);
+  color: var(--color-yellow);
+  cursor: pointer;
+}
+
+.header__nav-list {
+  list-style: none;
+  display: flex;
+  font-size: 2.4rem;
+}
+
+.header__nav-list-item:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.header__nav-list-item {
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.header__nav-list-item:hover {
+  color: var(--color-yellow);
+}
+
+.card {
+  max-width: 114rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  margin: 0 auto;
+  margin-top: 4rem;
+}
+
+.heading-2 {
+  font-size: 3.2rem;
+}
+
+.card__paragraph {
+  font-size: 2.6rem;
+}
+
+.card__header {
+  padding: 1rem 2rem;
+  background-color: var(--color-dark);
+  color: var(--color-yellow);
+}
+
+.card__content {
+  padding: 4rem;
+}
