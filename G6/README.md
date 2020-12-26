@@ -4,7 +4,7 @@
 
   ECMAScript is a programming language itself, specified in the document ECMA-262. In other words, ECMA-262 is the specification of     the programming language ECMAScript.
   JavaScript, on the other hand, can be viewed as a "dialect" of ECMAScript. It conforms to the ECMAScript specification while also     providing additional features not described in the specification.
-  JavaScript aslo is an interpreted language, not a compiled language and it's syntax is heavily inspired by C++ and Java.
+  JavaScript also is an interpreted language, not a compiled language and it's syntax is heavily inspired by C++ and Java.
   
 ## Writing a JavaScript program 🔹
 
