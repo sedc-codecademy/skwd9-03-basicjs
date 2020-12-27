@@ -1,20 +1,22 @@
-// alert('this works');
-
 // [STRINGS]
+
+// Concatenating strings
 
 let firstAnimal = 'dog';
 let secondAnimal = 'cat';
 
 let allAnimals = firstAnimal + ' ' + secondAnimal;
-
 // console.log(allAnimals);
 
+// Older option
 let sentence = 'I have a ' + firstAnimal + ', which loves chasing the ' + secondAnimal + '.';
 // console.log(sentence);
 
+// Using backticks, ES6 feature
 let sentence2 = `I have a ${firstAnimal}, which loves chasing the ${secondAnimal}.`;
 // console.log(sentence2);
 
+// Numbers concatenated with strings, get stringified
 let currentYear = 2020;
 let sentence3 = currentYear + ' is the best year!';
 // console.log(sentence3);
@@ -28,9 +30,11 @@ let result1 = number0 + number2 + number1 + number1;
 // let sentence4 = 'It's fun to be a programmer!';
 // let sentence4 = "It's fun to be a programmer!";
 // let sentence4 = "It's "fun to be a programmer!";
-// let sentence4 = 'It\'s fun to be a programmer!'
+// let sentence4 = 'It\'s fun to be a programmer!' // "/" is being used to escape characters
 // let sentence4 = `It's "fun" to be a programmer!`;
 // console.log(sentence4);
+
+// [NO VALUE TYPES] Undefined and Null
 
 // let lion;
 // console.log(lion);
@@ -40,6 +44,9 @@ let result1 = number0 + number2 + number1 + number1;
 
 // tiger = undefined;
 // console.log(tiger);
+
+
+// Not a Number - NaN
 
 let a = 1;
 let b = 'testing';
@@ -57,13 +64,15 @@ let result2 = a / b;
 // console.log(typeof b);
 // console.log(Number.isNaN(b));
 
+// Infinity and -Infinity
+
 let w = 1 / 0;
 // console.log(w);
 
 let q = -1 / 0;
 // console.log(q);
 
-// NAMING VARIABLES
+// [NAMING VARIABLES]
 // camelCase
 let newDog;
 // PascalCase
@@ -71,8 +80,7 @@ let NewCat;
 // kebap_case
 let i_love_kebaps;
 
-// OPERATORS
-
+// [OPERATORS]
 let pass = 50;
 let score = 90;
 let hasPassed = score >= pass;
@@ -90,7 +98,7 @@ let result7 = ((score1 + score2) > (hightScore1 + hightScore2));
 let elephant;
 // console.log(!!elephant)
 
-
+// Using the Logical AND operator
 // let a1 = true && true;
 // let a2 = true && false;
 // let a3 = false && true;
@@ -102,6 +110,7 @@ let elephant;
 // let a9 = false && '';
 // console.log(a9);
 
+// Using the Logical OR operator
 // let a1 = true || true;
 // let a2 = true || false;
 // let a3 = false || true;
@@ -113,8 +122,7 @@ let elephant;
 // let a9 = false || '';
 // console.log(a9);
 
-// prompt();
-
+// Comparing values from different types
 let a3 = 41;
 let b3 = '42';
 let c3 = '43';
@@ -124,13 +132,17 @@ let d3 = 'ivo';
 // console.log(b3 < c3);
 // console.log(a3 > d3);
 
-// IF STATEMENTS
+
+// [IF STATEMENT]
 
 // let animal2 = 'dog';
 
 // if(animal2 === 'cat') {
 //     console.log(`It's a cat`);
 // }
+
+
+// [IF ELSE STATEMENT]
 
 // let animal2 = 'dog';
 
@@ -142,22 +154,24 @@ let d3 = 'ivo';
 
 // console.log('After if')
 
-let money = 30;
+// [ELSE IF]
+
+let money = 25;
 let animal9 = 'dog';
 
-if (money < 10) {
-    console.log('You can buy milk');
-} else if (money < 20) {
-    console.log('you can buy fine wine');
-} else if (money < 30) {
-    console.log('you can buy a lot of things');
-} else if (money < 50) {
-    console.log('You can buy a SDD');
+if (money > 100) {
+    console.log('You can buy a laptop');
+} else if (money > 70) {
+    console.log('you can buy a monitor');
+} else if (money > 50) {
+    console.log('You can buy a keyboard');
+} else if (money > 20) {
+    console.log('you can buy a mouse');
 } else {
-    console.log('You can buy everything');
+    console.log('You can buy USB');
 }
 
-// VERY BAD!
+// VERY BAD! Combining different comparisons in a single else if statement
 // else if (animal9 === 'cat') {
 //     console.log('You have a cat');
 // }
