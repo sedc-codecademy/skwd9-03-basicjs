@@ -156,9 +156,10 @@ let d3 = 'ivo';
 
 // [ELSE IF]
 
-let money = 25;
+let money = 75;
 let animal9 = 'dog';
 
+// Correct way of writing an else if statement
 if (money > 100) {
     console.log('You can buy a laptop');
 } else if (money > 70) {
@@ -169,6 +170,19 @@ if (money > 100) {
     console.log('you can buy a mouse');
 } else {
     console.log('You can buy USB');
+}
+
+// Incorrect way of writing an else if statement
+if (money > 20) {
+    console.log('You can buy USB');
+} else if (money > 50) {
+    console.log('you can buy a mouse');
+} else if (money > 70) {
+    console.log('You can buy a keyboard');
+} else if (money > 100) {
+    console.log('you can buy a monitor');
+} else {
+    console.log('You can buy a laptop');
 }
 
 // VERY BAD! Combining different comparisons in a single else if statement
