@@ -52,7 +52,7 @@ Undefined means a variable is declared, but no value has been assigned to it (Th
 
 Null in JavaScript is an assignment value (It means nothing for the moment). You can assign it to a variable.
 
-## VAR VS LET
+## VAR VS LET 🔹
 
 Var:
   * Function scoped (see example in code from class)
@@ -62,7 +62,7 @@ Let:
   * Block scoped (see example in code from class)
   * Does not store the variable as property in global window object
 
-## Combining strings (concatanation)
+## Combining strings (concatanation) 🔹
 ```
 "Happy" + " " + "new" + " " + "year!"
 
@@ -78,7 +78,7 @@ let group = "G6";
 let comment = `${group} rocks!`;
 
 ```
-## NaN ( Not a Number)
+## NaN ( Not a Number) 🔹
 
 The NaN property represents "Not-a-Number" value. This property indicates that a value is not a legal number.
 
@@ -114,7 +114,8 @@ Number.isNan("apples") => false
   
 ### Truthy values => everything else
 
-## Logical operators:
+## Logical operators 🔹
+
   If a value can be converted to true, the value is so-called truthy. If a value can be converted to false,
   the value is so-called falsy.
   
