@@ -51,3 +51,76 @@ In JavaScript, undefined is a type, whereas null an object.
 Undefined means a variable is declared, but no value has been assigned to it (The variable is declared, but not defined).
 
 Null in JavaScript is an assignment value (It means nothing for the moment). You can assign it to a variable.
+
+## VAR VS LET
+
+Var:
+  * Function scoped (see example in code from class)
+  * Store the variable as property in global window object
+
+Let:
+  * Block scoped (see example in code from class)
+  * Does not store the variable as property in global window object
+
+## Combining strings (concatanation)
+```
+"Happy" + " " + "new" + " " + "year!"
+
+// using variables
+
+let firstName = "John";
+let lastName = "Doe";
+let fullName = firstName + " " + lastName;
+
+// Template strings using ``
+
+let group = "G6";
+let comment = `${group} rocks!`;
+
+```
+## NaN ( Not a Number)
+
+The NaN property represents "Not-a-Number" value. This property indicates that a value is not a legal number.
+
+  * Any mathematic operation performed between two operands without both to be able to be interpreted as regular numbers will result     in producing NaN.
+  * The value of this result will be NaN, but the type will be "number".
+  
+```
+let result = 100 / "text" => NaN
+typeof(result) => "number"
+
+// Be aware of following:
+result == NaN => false
+resut === NaN => false
+
+// Solution using isNaN() method from the global object
+isNaN(result) => true
+
+// Another problem if using isNan()
+isNaN("some string") => true
+
+// Final solution provided in ES6 specifications, Number.isNan(result) => typeof(result)=== "number" && window.isNaN(result)
+Number.isNan(result) => true
+Number.isNan("apples") => false
+```
+
+### Falsy values:
+  * false
+  * "" - empty string
+  * 0, -0
+  * null
+  * undefined
+  * NaN
+  
+### Truthy values => everything else
+
+## Logical operators:
+  If a value can be converted to true, the value is so-called truthy. If a value can be converted to false,
+  the value is so-called falsy.
+  
+  * && (AND) => expr1 && expr2 (If expr1 can be converted to true, returns expr2; else, returns expr1.)
+                
+  * || (OR) => expr1 || expr2 (If expr1 can be converted to true, returns expr1; else, returns expr2.)
+  
+  * ! (NOT) => !expr (Returns false if its single operand can be converted to true; otherwise, returns true.)
+
