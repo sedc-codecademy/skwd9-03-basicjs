@@ -1,0 +1,46 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+#blog-post-form, #blog-posts {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+#blog-post-form label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+input[type="text"] ~ label, .bold {
+    font-weight: 500;
+}
+
+#blog-post-form input, #blog-post-form textarea, #blog-post-form select  {
+    padding: 7px;
+}
+
+#blog-post-form > textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+#submit {
+    width: 100px;
+    margin: 10px auto auto auto;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px lightgray;
+}
