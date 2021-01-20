@@ -58,7 +58,6 @@ function validateInputs(inputs) {
             return false;
         }
     }
-
     return true;
 }
 
@@ -72,5 +71,4 @@ submitBtn.addEventListener('click', function (e) {
     } else {
         alert('Form is invalid, please check inputs.')
     }
-    
 })
