@@ -10,8 +10,10 @@ let submitBtn = document.getElementById('submit');
 // Content
 let blogPostsContainer = document.getElementById('blog-posts');
 
-// [Functions]
+// [Data]
+let blogPosts = [];
 
+// [Functions]
 function createBlogPost(title, content, category, allowComments, shareToFacebook) {
     let blogPost = `
       <article>
@@ -30,14 +32,45 @@ function createBlogPost(title, content, category, allowComments, shareToFacebook
 
     blogPost += `</article>`;
 
-    blogPostsContainer.innerHTML = blogPost;
+    blogPosts.unshift(blogPost);
+    renderBlogPosts();
+    cleanUpFormInputs();
+}
+
+function renderBlogPosts() {
+    blogPostsContainer.innerHTML = '';
+    for (let blogPost of blogPosts) {
+        blogPostsContainer.innerHTML += blogPost;
+    }
+}
+
+function cleanUpFormInputs() {
+    titleInput.value = '';
+    contentInput.value = '';
+    categoryInput.value = '';
+    commentsInput.checked = false;
+    shareToFacebookInput.checked = false;
+}
+
+function validateInputs(inputs) {
+    for (let input of inputs) {
+        if (!input.value) {
+            return false;
+        }
+    }
+
+    return true;
 }
 
 // [Event Handlers]
 submitBtn.addEventListener('click', function (e) {
     e.preventDefault(); // preventing button of type submit to submit the form
-
-    createBlogPost(
-        titleInput.value, contentInput.value, categoryInput.value, commentsInput.checked, shareToFacebookInput.checked
-    )
+    if (validateInputs([titleInput, contentInput, categoryInput])) {
+        createBlogPost(
+            titleInput.value, contentInput.value, categoryInput.value, commentsInput.checked, shareToFacebookInput.checked
+        )
+    } else {
+        alert('Form is invalid, please check inputs.')
+    }
+    
 })
