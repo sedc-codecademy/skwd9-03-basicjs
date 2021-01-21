@@ -75,16 +75,54 @@ let first = document.getElementById('first');
 let second = document.getElementById('second');
 let button = document.getElementById('testBtn');
 
-button.addEventListener('click', function(event) {
-    // console.log(event);
-    event.stopPropagation();
-    alert('Test button clicked!');
+// button.addEventListener('click', function(event) {
+//     // console.log(event);
+//     event.stopPropagation();
+//     alert('Test button clicked!');
+// });
+
+// first.addEventListener('click', function() {
+//     alert("First was clicked");
+// });
+
+// second.addEventListener('click', function() {
+//     alert("Second was clicked!");
+// });
+
+let buttonEvent = document.getElementById('eventTest');
+
+buttonEvent.addEventListener('click', function(event) {
+    console.log(event); 
+
+    // buttonEvent.style.backgroundColor = 'yellow';
+
+    event.target.innerText = 'Changed!';
+    event.target.style.backgroundColor = 'red';
+    event.target.style.fontSize = '20px';
+    event.target.style.fontFamily = 'Verdana';
+    event.target.style.fontWeight = '900px';
 });
 
-first.addEventListener('click', function() {
-    alert("First was clicked");
-});
 
-second.addEventListener('click', function() {
-    alert("Second was clicked!");
-});
+
+// Student Exercise 1
+
+let paragraph = document.getElementById('paragraph');
+let editBtn = document.getElementById('editBtn');
+
+editBtn.addEventListener('click', function(event) {
+    // By selecting the paragraph previously
+
+    // paragraph.style.color = 'yellow';
+    // paragraph.style.backgroundColor = 'green';
+    // paragraph.style.fontSize = '20px';
+
+    // By selecting the paragraph by using the EVENT object
+    console.log(event.target.previousElementSibling);
+    let para = event.target.previousElementSibling;
+
+    para.classList.add('myClass');
+    para.style.color = 'yellow';
+    para.style.backgroundColor = 'green';
+    para.style.fontSize = '20px';
+})
