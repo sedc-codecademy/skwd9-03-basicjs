@@ -440,6 +440,58 @@ btn.addEventListener("click", function(){
 					</ul>
 				</section>
 
+				<section style="text-align: left;">
+					<h2 style="color:#e8643b;">Student Exercise - #3</h2>
+					<h3>Register User</h3>
+					<ul>
+						<li>Create an HTML page, with 4 inputs for FirstName, LastName ,Email and Password and a button</li>
+						<li>On click of the button call a function that will get all the inputs' values and use the values as parameters for a new function which will add them to string</li>
+						<li>Finaly print the string in a new p element on the screen</li>
+					</ul>		
+					<p>Time to accomplish: 15 minutes</p>	
+				</section>
+				<section style="text-align: left;">
+					<h2 style="color:#e8643b;">Student Exercise - #3 Solution</h2>
+						<p><pre><code class="html" data-trim contenteditable>
+<div id="userInputs">
+	<input type="text" placeholder="First Name">
+	<input type="text" placeholder="Last Name">
+	<input type="email" placeholder="Email">
+	<input type="password" placeholder="Password">
+</div>
+<button id="submit">Submit</button>
+<p id="result"></p>
+						</code></pre></p>
+						<p><pre><code class="js" data-trim contenteditable>
+let inputs = document.getElementById("userInputs").children;
+let result = document.getElementById("result");
+let submitBtn = document.getElementById("submit");
+
+function getUserInfo(inputElements){
+    let result = "User: ";
+    for (let input of inputElements) {
+        result += input.value + " ";
+    }
+    result += "is registered!"
+    return result;
+}
+submitBtn.addEventListener("click", function(){
+    result.innerText = getUserInfo(inputs);
+})
+						</code></pre></p>
+					</ul>
+				</section>
+
+				<section style="text-align: left;" data-transition="slide" data-background="#007ac9" data-background-transition="slide">
+					<h1>Homework</h1>
+					<h3>Create a dynamic table</h3>
+						<p>Write a Javascript function that will dynamiclly create a table<br>
+User should input the number of Colums and Rows<br>
+In every table cell print which row and column it is  (ex. Row-3 Column-1)<br>
+      Don't forget to use google! :)
+					</p>
+				</section>
+
 				<!-- Slide 19 -->
 				<section style="text-align: left;">
 					<h1>Thank you!</h1>
