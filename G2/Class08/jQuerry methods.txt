@@ -1,0 +1,117 @@
+* CONTENT FILTERS * 
+Get or change content of elements, attributes, text nodes
+
+GET/CHANGE CONTENT
+.html()
+.text()
+.replaceWith()
+.remove()
+
+ELEMENTS 
+.before()
+.after()
+.prepend()
+.append()
+.remove()
+.clone()
+.unwrap()
+.detach()
+.empty()
+.add()
+
+ATTRIBUTES
+.attr()
+.removeAttr()
+.addClass()
+.removeClass()
+.css()
+
+FORM VALUES
+.val()
+.isNumeric()
+
+* FINDING ELEMENTS * 
+Find and select elements to work with & traverse the DOM
+
+GENERAL
+.find()
+.closest()
+.parent()
+.parents()
+.children()
+.siblings()
+.next()
+.nextAll()
+.prev()
+.prevAll()
+
+FILTER/TEST
+.filter()
+.not()
+.has()
+.is()
+:contains()
+
+ORDER IN SELECTION
+.eq()
+.lt()
+.gt()
+
+* DIMENSION/POSITION *
+Get or update the dimensions or position of a box
+
+DIMENSION
+.height()
+.width()
+.innerHeight()
+.innerWidth()
+.outerHeight()
+.outerWidth()
+$(document).width()
+$(document).height()
+$(window).height()
+$(document).width()
+
+POSITION
+.offset()
+.position()
+.scrollLeft()
+.scrollTop()
+
+* EFFECTS & ANIMATION * 
+Add effects and animation to parts of the page
+
+BASIC 
+.show()
+.hide()
+.toggle()
+
+FADING
+.fadeIn()
+.fadeOut()
+.fadeTo()
+.fadeToggle()
+
+SLIDING
+.slideDown()
+.slideUp()
+.slideToggle()
+
+CUSTOM
+.delay()
+.stop()
+.animate()
+
+* EVENTS *
+Create event listeners for each element in the selection
+
+DOCUMENT/FILE
+.ready()
+.load()
+
+USER INTERACTION
+.on()
+
+there used to be methods for individual types of events, so you may see methods such as .click(), .hover(), .submit()
+However, these have been dropped in favour of the .on() method to handle events.
+
