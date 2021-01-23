@@ -4,10 +4,14 @@ function Trainer(firstName, lastName, subject, group) {
     this.subject = subject;
     this.group = group;
     this.university = 'SEDC';
+    this.students = [];
     this.fullName = function () {
         // console.log('INSIDE FULLNAME FUNC', this);
         // console.log('GLOBAL THIS INSIDE FUNC', globalThis)
         return `${this.firstName} ${this.lastName}`
+    }
+    this.addStudent = function (student) {
+        this.students.push(student);
     }
 }
 
@@ -50,20 +54,57 @@ function Student(firstName, lastName, group) {
 }
 
 let ivo = new Trainer('Ivo', 'Kostovski', 'BJS', 'G7');
-// console.log(ivo);
-console.log(ivo.fullName())
+// console.log(ivo.fullName())
 
 let ivan = new Trainer('Ivan', 'Lazarevski', 'BJS', 'G7');
-// console.log(ivan)
-console.log(ivan.fullName())
+// console.log(ivan.fullName())
 // console.log("THIS IN GLOBAL SCOPE", this)
 
 let john = new Student('John', 'Smith', 'G7');
-console.log(john.trainer)
+
 john.assignTrainer('G5')
-console.log(john.trainer)
-// john.group = 'G1';
-console.log(john.group)
 john.changeGroup('G1');
-console.log(john.group)
-console.log(john.trainer)
+
+let university = {
+    trainers: [],
+    students: [],
+    addTrainer: function (trainer) {
+        this.trainers.push(trainer);
+    },
+    addStudent: function (student) {
+        this.students.push(student);
+    },
+    removeTrainer: function (trainer) {
+        let newTrainersList = [];
+        for (let tr of this.trainers) {
+            if (tr === trainer) {
+                continue;
+            }
+            newTrainersList.push(tr);
+        }
+        this.trainers = newTrainersList;
+    },
+    removeStudent: function (student) {
+        let newStudentsList = [];
+        for(let st of this.students) {
+            if (st === student) {
+                continue;
+            }
+            newStudentsList.push(st);
+        }
+        this.students = newStudentsList;
+    }
+}
+let peter = new Student('Peter', 'Petersen', 'G1')
+// console.log(university)
+university.addTrainer(ivo);
+university.addTrainer(ivan);
+university.addStudent(john);
+university.addStudent(peter);
+// console.log(university)
+// console.log(university.trainers)
+// university.removeTrainer(ivo)
+// console.log(university.trainers)
+console.log(university);
+university.removeStudent(peter);
+console.log(university);
