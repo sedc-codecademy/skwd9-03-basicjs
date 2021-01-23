@@ -105,6 +105,6 @@ university.addStudent(peter);
 // console.log(university.trainers)
 // university.removeTrainer(ivo)
 // console.log(university.trainers)
-console.log(university);
+console.log(university.students);
 university.removeStudent(peter);
-console.log(university);
+console.log(university.students);
