@@ -88,3 +88,28 @@ function changeFontSize(sign) {
         alert("Something went wrong!");
     }
 }
+
+
+
+// Student Exercise #2
+
+
+let result = document.getElementById('result');
+let saveBtn = document.getElementById('saveBtn');
+
+function printUser(fName, lName, email, pass) {
+    result.innerText = "";
+    if (fName === "" || lName === "" || email === "" || pass === "") {
+        alert("You must insert all input fields!");
+    } else {
+        result.innerText += `${fName} ${lName} with Email: ${email} and pass ${pass} was added!`;
+    }
+}
+
+saveBtn.addEventListener('click', function () {
+    let fname = document.getElementById('firstName').value;
+    let lName = document.getElementById('lastName').value;
+    let email = document.getElementById('email').value;
+    let pass = document.getElementById('password').value;
+    printUser(fname, lName, email, pass);
+})
