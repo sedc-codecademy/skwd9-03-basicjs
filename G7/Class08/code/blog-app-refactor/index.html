@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <h1>Blog post editor</h1>
+
+    <form id="blog-post-form">
+      <label class="bold" for="bp-title">Title</label>
+      <input id="bp-title" name="bp-title" type="text" placeholder="Enter blog post title..."/>
+
+      <label for="bp-content">Content</label>
+      <textarea name="bp-content" id="bp-content"></textarea>
+
+      <label for="bp-category">Category</label>
+      <select name="bp-category" id="bp-category">
+        <option value="" selected disabled>Please choose category...</option>
+        <option value="sport">Sport</option>
+        <option value="news">News</option>
+        <option value="weather">Weather</option>
+        <option value="politics">Politics</option>
+        <option value="movies">Movies</option>
+        <option value="games">Games</option>
+      </select>
+
+      <label for="bp-comments">Allow comments</label>
+      <div>
+        <label for="bp-comments-yes">Yes</label>
+        <input type="radio" name="bp-comments" id="bp-comments-yes">
+        <label for="bp-comments-no">No</label>
+        <input type="radio" name="bp-comments" id="bp-comments-no">
+      </div>
+
+      <div class="mt-10">
+        <input type="checkbox" name="bp-share" id="bp-share" />
+        <label for="bp-share">Share to facebook</label>
+      </div>
+
+      <button type="submit" id="submit">Submit</button>
+
+    </form>
+
+    <section id="blog-posts">
+      
+    </section>
+
+    <script src="./scripts/app.js"></script>
+  </body>
+</html>

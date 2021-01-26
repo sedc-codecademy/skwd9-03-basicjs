@@ -1,0 +1,12 @@
+{
+    "dog": {
+        "name": "Boem",
+        "age": 2,
+        "hasTail": true,
+        "children": [],
+        "properties": {}
+    },
+    "cat": {
+        
+    }
+}
