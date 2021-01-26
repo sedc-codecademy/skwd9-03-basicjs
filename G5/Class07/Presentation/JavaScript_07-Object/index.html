@@ -354,12 +354,271 @@ bob.canSing = true;
 				</p>
 			</section>
 			<section style="text-align: left;">
+				<h1>Exercise 3</h1>
+				<p>
+					Write a JavaScript program to delete the <b>lecture</b> property from the following object. Add a property <b>age</b> to the
+					object. Add a method <b>getFullName</b> that returns the full name ( First Name and Last name )<br>
+					Sample object: <br>
+					<pre>
+let trainer = { 
+	name :  "Stefan",
+	lastName: "Stefanovski",
+	academy: "SEDC",
+	lecture: "Objects"
+}
+</pre>
+				</p>
+			</section>
+			<section style="text-align: left;">
+				<h3>Exercise 3 Solution</h3>
+				<p>
+					<pre><code class="hljs" data-trim contenteditable>
+delete(trainer.lecture);
+trainer.age = 25;
+trainer.getFullName = function(){
+  return `${trainer.name} ${trainer.lastName}`;
+}
+					</code></pre>
+				</p>
+			</section>
+			<section style="text-align: left;">
+				<h2>Constructor Notation (1)</h2>
+				<ul>
+					<li>When you want several objects to represent similar things you can use a function as a <strong>template</strong>
+						for creating objects</li>
+					<li>Like all functions, it contains statements which are used for adding properties or methods to the object
+						(which end in semicolon)</li>
+					<li>The <strong>this</strong> keyword is used instead of the object name to indicate that the property or method
+						belongs to the object that <strong><em>this</em></strong> function creates</li>
+					<li>Constructor function usually begins with a capital letter </li>
+				</ul>
+			</section>
+
+			<section>
+				<section>
+					<div class="sl-block" data-block-type="image" style="width: 100%; height: 100%;" data-block-id="">
+						<div class="sl-block-content"><img src="assets/img/constructor.png"></div>
+					</div>
+				</section>
+				<section>
+					<div class="sl-block" data-block-type="image" style="width: 100%; height: 100%;" data-block-id="">
+						<div class="sl-block-content"><img src="assets/img/constructor_instances.png"></div>
+					</div>
+				</section>
+			</section>
+
+			<section>
+				<div class="sl-block" data-block-type="image" style="width: 100%; height: 100%;" data-block-id="">
+					<div class="sl-block-content"><img src="assets/img/objects_with_contructor.png"></div>
+				</div>
+			</section>
+
+			<section style="text-align: left;">
+				<h2>Constructor Notation (2)</h2>
+				<ul>
+					<li>You can create <strong>instances</strong> of the object using the <strong>constructor</strong> function</li>
+					<li>The <strong>new</strong> keyword followed by a call to the function creates a new object</li>
+					<li>The properties of the objects are given as arguments to the function</li>
+				</ul>
+			</section>
+
+			<section>
+				<div class="sl-block" data-block-type="image" style="width: 100%; height: 100%;" data-block-id="">
+					<div class="sl-block-content"><img src="assets/img/object_constructor_call.png"></div>
+				</div>
+			</section>
+
+
+			<section style="text-align: left;">
+				<h2>The 'This' keyword</h2>
+				<ul>
+					<li>Each execution context gets it
+						<ul>
+							<li><b>Regular function call: </b> the <i>this</i> keyword points at the global object (which is the window
+								object in the browser)</li>
+							<li><b>Method call: </b> the <i>this</i> keyword points at the object that is calling the method</li>
+						</ul>
+					</li>
+					<li><strong>The <em>this</em> keyword is not assigned a value until a function where it is defined is actually
+							called</strong></li>
+					<!-- <li>The keyword <strong>this</strong> is commonly used inside functions and objects</li>
+						<li>Where the function is declared alters what this means. It always refers to one object, usually the object in which the function operates</li> -->
+				</ul>
+			</section>
+
+
+			<section style="text-align: left;">
+				<h2>A FUNCTION IN GLOBAL SCOPE (1)</h2>
+				<ul>
+					<li>When a function is created at the top level of a script (that is, not inside another object or function), then
+						it is in the <strong>global scope</strong> or <strong>global context</strong></li>
+					<li>The default object in this context is the window object. So when <strong>this</strong> is used inside a
+						function in the global context it refers to the <em>window object</em></li>
+				</ul>
+				<p>
+					<pre><code class="hljs" data-trim contenteditable>
+function windowSize() { 
+	let width= this.innerWidth; 
+	let height = this.innerHeight; 
+	return [height, width]; 
+}
+					</code></pre>
+				</p>
+
+			</section>
+			<section style="text-align: left;">
+				<h2>A METHOD OF AN OBJECT </h2>
+				<ul>
+					<li>When a function is defined inside an object, it becomes a method. In a method, this refers to the containing
+						object</li>
+				</ul>
+				<p>
+					<pre><code class="hljs" data-trim contenteditable>
+
+let shape = {
+	width: 600,
+	height: 400,
+	getArea: function(){
+		return this.width * this.height;
+	}
+}; 
+					</code></pre>
+				</p>
+
+			</section>
+
+			<section style="text-align: left;">
+				<h2>FUNCTION EXPRESSION AS METHOD </h2>
+				<ul>
+					<li>If a named function has been defined in global scope, and it is then used as a method of an object, this
+						refers to the object it is contained within</li>
+				</ul>
+				<p>
+					<pre><code class="hljs" data-trim contenteditable>
+let width = 600;
+let shape= {width: 300}; 
+
+function showWidth() { 
+	console.log(this.width);
+}
+shape.showWidth = showWidth; 
+shape.showWidth(); // 300 
+
+showWidth(); //600
+					</code></pre>
+				</p>
+					</code></pre>
+				</p>
+			</section>
+			<section style="text-align: left;">
+				<h1>Exercise 4</h1>
+				<p>
+					Create a student registry form. The form should have:
+					<ul>
+						<li>First Name</li>
+						<li>Last Name</li>
+						<li>Age</li>
+					</ul><br>
+					The form should have a save button which will create a student object and add it to an array (students).
+					Log the array after every save to see the results in the console.<br>
+					<b>Bonus:</b> Make the students appear in an unordered list in the page.
+				</p>
+			</section>
+			<section style="text-align: left;">
+				<h3>Exercise 5 Solution(1)</h3>
+				<p>
+					<pre><code class="hljs" data-trim contenteditable>
+&lt;div style="text-align: center;">
+  &lt;h1>Student Form&lt;/h1>
+  &lt;div id="studentForm">
+    First Name: &lt;input type="text">
+    Last Name: &lt;input type="text">
+    Age: &lt;input type="text">
+    &lt;button>Add&lt;/button>
+  &lt;/div>
+  &lt;div id="result1">
+    &lt;h3>Students:&lt;/h3>
+    &lt;ul style="list-style-position: inside">&lt;/ul>
+  &lt;/div>
+&lt;/div>
+					</code></pre>
+				</p>
+			</section>
+			<section style="text-align: left;">
+				<h3>Exercise 5 Solution(2)</h3>
+				<p>
+					<pre><code class="js" data-trim contenteditable>
+let students = [];
+function Student(first, last, age){
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+}
+
+function showStudents(studentsArr, element){
+  element.innerHTML = "";
+  for (let student of studentsArr) {
+    element.innerHTML += `<li><b>Name:</b> ${student.firstName} ${student.lastName}, 
+    <b>Age:</b> ${student.age}</li>`;
+  }
+}
+					</code></pre>
+				</p>
+			</section>
+			<section style="text-align: left;">
+				<h3>Exercise 5 Solution(3)</h3>
+				<p>
+					<pre><code class="js" data-trim contenteditable>
+let studentForm = document.getElementById("studentForm");
+let result = document.getElementById("result1");
+
+studentForm.getElementsByTagName("button")[0].addEventListener("click", function(){
+  let first = studentForm.children[0].value;
+  let last = studentForm.children[1].value;
+  let age = studentForm.children[2].value;
+  let newStudent = new Student(first, last, age);
+  students.push(newStudent);
+  showStudents(students, result.getElementsByTagName("ul")[0]);
+  studentForm.children[0].value = "";
+  studentForm.children[1].value = "";
+  studentForm.children[2].value = "";
+});
+					</code></pre>
+				</p>
+			</section>
+			<section style="text-align: center;" data-transition="slide" data-background="#007ac9" data-background-transition="slide">
+				<h2>HOMEWORK Part 1</h2>
+				<p>
+					<h4>Create OBJECT animal with 2 properties and 1 method:</h4>
+					<ul>
+						<li> name </li>
+						<li> kind </li>
+						<li> speak (method) </li>
+					</ul>
+					<p>this method will take one parameter and will print in the console a message: e.g. dog.speak(“hey bro!!!”) will log in the console “Dog says: ‘Hey bro!!!’”</p>
+
+					<strong>Bonus: enter the values from prompt or from HTML inputs</strong>
+			</section>
+			<section style="text-align: center;" data-transition="slide" data-background="#007ac9" data-background-transition="slide">
+				<h2>HOMEWORK Part 2</h2>
+				<p>Write a JavaScript program to display the reading status of some book. 
+				The object should have the next properties: title, author, readingStatus 
+				and a method that will return info depending on the readingStatus e.g. </p>
+				<ul>
+					<li>Already read 'The Robots of dawn' by Isaac Asimov. (if true)</li>
+					<li>You still need to read 'Mockingjay: The Final Book of The Hunger Games' by Suzanne Collins. (if false).</li>
+				</ul>
+				<h6>Bonus: enter the values from prompt() or read them from HTML</h6>	
+			</section>
+			<!-- Slide 19 -->
+			<section style="text-align: left;">
 				<h1>Thank you!</h1>
 				<p>
 					<a href="#">Questions?</a> <br>
 				</p>
 			</section>
 		</div>
+
 	</div>
 
 	<script src="assets/lib/js/head.min.js"></script>
