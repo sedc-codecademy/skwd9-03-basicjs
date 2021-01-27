@@ -7,7 +7,7 @@
 // jQuery Selectors
 
 // let title = $('#title'); // we are getting a jquery collection
-// console.log(title); 
+// console.log(title);
 // console.log(title[0])
 
 // title.hide();
@@ -53,7 +53,6 @@
 //     console.log('Link clicked')
 // })
 
-
 // let postButton = $('button').last();
 
 // postButton.click(function () {
@@ -67,7 +66,7 @@
 // $.ajax({
 //     url: 'https://jsonplaceholder.typicode.com/posts'
 // }).done(function (res) {
-//     console.log(res); 
+//     console.log(res);
 // })
 
 // Fetch
@@ -87,40 +86,132 @@
 
 // GET SINGLE POST
 
-fetch('https://jsonplaceholder.typicode.com/posts/34').then(function (res) {
-    return res.json()
-}).then(function (res) {
-    // console.log(res)
-})
+// fetch("https://jsonplaceholder.typicode.com/posts/34")
+//   .then(function (res) {
+//     return res.json();
+//   })
+//   .then(function (res) {
+//     console.log(res);
+//   });
 
 // CREATE POST
 
+// let newBlogPost = {
+//     title: 'New Title',
+//     body: 'Testing body content',
+//     userId: 1
+// }
+// console.log(newBlogPost)
+
+// let parsedBlogPost = JSON.stringify(newBlogPost)
+// console.log(parsedBlogPost)
+
+// fetch('https://jsonplaceholder.typicode.com/posts', {
+//     method: 'POST',
+//     body: parsedBlogPost,
+//     headers: {
+//         "Content-type": "application/json; charset=UTF-8",
+//       },
+// }).then(function (res) {
+//     return res.json();
+// }).then(function (blogPost) {
+//     console.log(blogPost)
+// })
+
 // UPDATE POST - PUT
+// let post34 = {
+//   body: "changed",
+//   id: 34,
+//   title: "magnam ut rerum iure",
+//   userId: 4,
+// };
+// console.log(post34);
+
+// let stringifiedPost34 = JSON.stringify(post34);
+// console.log(stringifiedPost34);
+
+// fetch("https://jsonplaceholder.typicode.com/posts/34", {
+//   method: "PUT",
+//   body: stringifiedPost34,
+//   headers: {
+//     "Content-type": "application/json; charset=UTF-8",
+//   },
+// }).then(function (res) {
+//     return res.json()
+// }).then(function (blogPost) {
+//     console.log(blogPost);
+// })
 
 // UPDATE POST - PATCH
 
+// let post34 = {
+//   body: "changed",
+// };
+// console.log(post34);
+
+// let stringifiedPost34 = JSON.stringify(post34);
+// console.log(stringifiedPost34);
+
+// fetch("https://jsonplaceholder.typicode.com/posts/34", {
+//   method: "PATCH",
+//   body: stringifiedPost34,
+//   headers: {
+//     "Content-type": "application/json; charset=UTF-8",
+//   },
+// })
+//   .then(function (res) {
+//     return res.json();
+//   })
+//   .then(function (blogPost) {
+//     console.log(blogPost);
+//   });
+
 // DELETE POST
+
+// fetch('https://jsonplaceholder.typicode.com/posts/34', {
+//     method: 'DELETE'
+// }).then(function (res) {
+//     return res.json();
+// }).then(function (res) {
+//     console.log(res);
+// })
+
+// ERROR HANDLING
+fetch("https://jsonplaceholder.typicode.com/posts/34")
+  .then(function (res) {
+    console.log("1st then", res);
+    if (res.ok) {
+      return res.json();
+    } else {
+      throw new Error(res.status);
+    }
+  })
+  .then(function (res) {
+    console.log("2nd then", res);
+  })
+  .catch(function (error) {
+      console.log(error);
+  });
 
 // JSON STRINGIFY
 
 let dog = {
-    name: 'Boem',
-    age: 2
-}
+  name: "Boem",
+  age: 2,
+};
 
-let stringifiedDog = JSON.stringify(dog)
-console.log(stringifiedDog)
+let stringifiedDog = JSON.stringify(dog);
+// console.log(stringifiedDog)
 
-let parsedDog = JSON.parse(stringifiedDog)
+let parsedDog = JSON.parse(stringifiedDog);
 
-console.log(parsedDog)
-
+// console.log(parsedDog)
 
 let jsonDog = `
 {
     "name": "Boem",
     "age": 2
 }
-`
+`;
 
-console.log(JSON.parse(jsonDog));
+// console.log(JSON.parse(jsonDog));
