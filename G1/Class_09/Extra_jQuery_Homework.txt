@@ -1,0 +1,33 @@
+Exercise 1
+HTML
+
+<button id="clicker">Click me to show a hidden secret!</button>
+<div id="secret" style="display: none">I am a hidden secret.</div>
+Instructions:
+
+Add jQuery code that fades in the text "I am a hidden secret" whenever the button is clicked.
+Change your jQuery code so it slides down the text instead of fading it in.
+Change the button text to say "Click me to toggle a hidden secret!" and make the text toggle between fading in and out each time it is clicked.
+
+
+Exercise 2
+HTML
+
+<button id="clicker">Click me to hide the hidden secrets!</button>
+<p class="secret">I am hidden secret #1.</p>
+<p class="secret">I am hidden secret #2.</p>
+<p class="secret">I am hidden secret #2.</p>
+<p>I am <em>not</em> a hidden secret.</p>
+Instructions:
+
+Add jQuery code to modify the page so that when the user clicks the button, the paragraphs that start with the words "I am a hidden secret" slide up.
+
+Exercise 3
+<img src="http://hackasaurus.toolness.org/images/goggles/supergirl.png">
+<p>
+  <button id="clicker">Click me to change the picture</button>
+</p>
+Instructions:
+
+Change the page with jQuery so that when the button is clicked, the image changes to some image that you have downloaded on your machine.
+

@@ -1,0 +1,22 @@
+.listItem{
+    list-style-type: none;
+    display: inline-block;
+}
+
+.listItem a{
+    margin: 10px;
+}
+
+#toggleMenuItems{
+    margin-bottom: 10px;
+}
+
+.lables{
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.addRedBgColor{
+    background-color: red;
+}
