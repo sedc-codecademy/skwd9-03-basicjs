@@ -1,0 +1,23 @@
+{
+  "name": "Goce",
+  "lastName": "Kabov",
+  "age": 23,
+  "subjects": ["BasicJS", "AdvancedJS"],
+  "hasWhiteHair": false,
+  "address": {
+    "street": "Bob Bobsky street",
+    "number": 333
+  },
+  "clidren": null
+}
+
+// RULES
+
+// keys are quoted
+// Values allowed
+//   * string
+//   * number
+//   * array
+//   * object
+//   * boolean
+//   * null
