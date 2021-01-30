@@ -1,3 +1,5 @@
+
+// Exercise 1
 // 1. Implement login function => checked 
 // 2. Insert username and password => checked
 // 3. Validate if there is something entered in these inputs. Make sure to work only for inserted values
@@ -26,6 +28,8 @@ let password = "dontknow!23";
 
 // login(username, password);
 
+
+// Exercise 2
 
 // 1. Create an object constructor function with five props (username, pass, role, courses, homeworks)
 // 2. Add the appropriate properties
@@ -76,7 +80,7 @@ function displayItems(items) {
     }
 }
 
-function login(username, password) {
+function userLogin(username, password) {
     if (username === "" || password === "") {
         console.log("ERROR! Please insert username and password");
     } else {
@@ -91,4 +95,25 @@ function login(username, password) {
 }
 
 
-login(martin.username, martin.password);
+userLogin(martin.username, martin.password);
+userLogin(angela.username, angela.password);
+
+
+
+// Example forms => prevent default
+let fName = document.getElementById('fName');
+let lName = document.getElementById('lName');
+let age = document.getElementById('age');
+let btn = document.getElementById('save');
+
+
+btn.addEventListener('click', function(event) {
+    event.preventDefault();
+    let person = {
+        firstName: fName.value,
+        lastName: lName.value,
+        age: age.value
+    }
+
+    console.log(person);
+});
