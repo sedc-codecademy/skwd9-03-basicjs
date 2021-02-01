@@ -16,7 +16,7 @@
 11. Finished tasks should not be shared publicly in the chat.
 12. The already written code for each task is just a placeholder to help you start, if you think is not right, feel free to remove it completely.
 13. There are no official breaks, come and go as you please. The trainer and assistant will coordinate to make sure at least one person is always available for answering questions.
-14. You should send us your code by github when you are done or when the class ends at 12.30. Do not change anything afterwards, no commits after 12.45 will be considered in the feedback. You can add all the code in a single file or have multiple, as you wish, just make a clear distinction of which task is which.
+14. You should send us your code by github when you are done or when the class ends at 20.45. Do not change anything afterwards, no commits after 21.00 will be considered in the feedback. You can add all the code in a single file or have multiple, as you wish, just make a clear distinction of which task is which.
 
 There is no need for stressing out, as there will be no grades, just feedback similar to what you get for the submitted homeworks. Also there is no passing and failing. Try to do your best and send us your work even if it is not finished.
 
