@@ -2,13 +2,13 @@
 
 ## Rules, Info & Common Q&A:
 
-0. This is not an official test, even though it will be done in a similar way so that the academy (the trailer and assistant as representatives) would be able to see your progress during this course and take that in consideration for the Advanced JavaScript course.
+0. This is not an official test, even though it will be done in a similar way so that the academy (the trainer and assistant as representatives) would be able to see your progress during this course and take that in consideration for the Advanced JavaScript course.
 1. **Do not use Higher Order Functions** like .split(), .join(), .filter(), .reduce() or any other we haven't used in during this course. If you do, the whole task will be considered as invalid, as that would mean using a shortcut and missing the point of the task.
 2. jQuery is not banned but it would be more appreciated if you use plain JavaScript.
 3. Feel free to **use google** or any other website as much as needed to do the tasks.
 4. Consulting colleagues is not prohibited, but try to do your own task without copying someone elses work. There is huge difference in consulting and just copying. Copied code is easily noticeable (just like in the homeworks) and if seen, we will compare time of submission between the students.
 5. HTML and CSS are not necessary for completing these tasks, you should **only use JavaScript**.
-6. In these cases we are not worried about having evything in the global scope, so the main goal is just getting the proper result in most efficient way possible (but still considering rule no. 1)
+6. In these cases we are not worried about having everything in the global scope, so the main goal is just getting the proper result in most efficient way possible (but still considering rule no. 1)
 7. Using function parameters is optional, feel free to decide if you should use it somewhere or not.
 8. The three dots represent place where code should be written and they should be removed.
 9. The correct solutions will be added on our groups github repo after all students from each group have finished the tasks.
@@ -20,7 +20,7 @@
 
 There is no need for stressing out, as there will be no grades, just feedback similar to what you get for the submitted homeworks. Also there is no passing and failing. Try to do your best and send us your work even if it is not finished.
 
-Send finnished work to:
+Send finished work to:
 - Ivo Kostovski - ivo.kostovski@gmail.com
 - Ivan Lazarevski - ivan.lazarevski@seavus.com
 
