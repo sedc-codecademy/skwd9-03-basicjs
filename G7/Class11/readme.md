@@ -20,6 +20,10 @@
 
 There is no need for stressing out, as there will be no grades, just feedback similar to what you get for the submitted homeworks. Also there is no passing and failing. Try to do your best and send us your work even if it is not finished.
 
+Send finnished work to:
+- Ivo Kostovski - ivo.kostovski@gmail.com
+- Ivan Lazarevski - ivan.lazarevski@seavus.com
+
 ## Tasks:
 
 ### Exercise 1 - Map numbers to string with dash:
