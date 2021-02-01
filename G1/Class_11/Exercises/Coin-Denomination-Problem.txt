@@ -1,0 +1,20 @@
+Coin donimination problem:
+
+We need to write a javascript program so we can calcucalte the amout of coins we need to have in order to buy a specific product in coins.
+We are given certain amount of cents in coins and we need to calculate how many of each coin we will need to buy a specific product.
+Take in count that we need to use as less coins as possible.
+
+Example:
+We have 263 cents and we have certain amount of coins with the following denomination:
+ - 7, 50 cents coins
+ - 10, 10 cents coins
+ - 17, 5 cents coins
+ - 23, 2 cents coins
+ - 30, 1 cent coin
+
+To cover the amount of 263 cents we will need at least 8 coins.
+Those coins will be 5 - 50 cents coins, 1 - 10 cents coin, 1 - 2 cents coin and 1 - 1 cent coin.
+
+Make this task work dynamicly with user input. (It does not matter if you want to make it work with input field or prompt up to you).
+
+We can use only natural numbers for the input for cents.

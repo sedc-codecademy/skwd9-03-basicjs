@@ -1,0 +1,60 @@
+body {
+    background-color: black;
+    background-image: url("https://jooinn.com/images/simple-starry-space-background.jpg");
+    color: white;
+    overflow-x: hidden;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+img.medium {
+    margin-top: 20px;
+    width: 300px;
+    height: 130px;
+}
+
+.medium {
+    height: 40vh;
+}
+
+.small {
+    height: 30vh;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+#btnNext, #btnPrev {
+    display: none;
+}
+
+#loader {
+    display: none;
+    width: 80px;
+}
+
+.container {
+    background-color: black;
+}
+
+.different {
+    color: yellow;
+    font-weight: 800;
+}
+
+#btnPeople:hover {
+    border: 2px solid transparent;
+}
+
+#btnShips:hover {
+    border: 2px solid transparent;
+}
+
+.botDiv {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

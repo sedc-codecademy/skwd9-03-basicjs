@@ -1,0 +1,7 @@
+Create register and login form.
+
+We need to create a whole register and login form with HTML, CSS and Javascript.
+
+We are free to use vanilla JS or jQuery for the javascript part. 
+
+We can also use Bootstrap as CSS library to make the form look better.
