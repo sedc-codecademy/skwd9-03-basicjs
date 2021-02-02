@@ -47,11 +47,11 @@ Bonus: make the function work to any number instead of only to 100.
 let num = 100;
 
 function getDividableNumbers(...) {
-    //Code goes here...
+    // Code goes here...
 }
 ```
 
-### Exercise 5
+### Exercise 3
 Write a javascript function that will serve as an online phone book. You need to give the user an option for storing new contacts and display them in a table. Each contact is consisted of firstName, lastName, phoneNumber. They request from you to allow them insert the inputs through an input fields that are part of a form. If the contact is saved successfully it needs to be displayed in a table. below the register form after clicking on the Add button.
 ###### - Use of functions will be appreciated, but focus on making it work first
 ###### - Use the provided HTML, it is a boost for save some time and focus on JS only
