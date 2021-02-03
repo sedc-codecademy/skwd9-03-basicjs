@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>JavaScript</title>
+
+	<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+	<meta name="author" content="Hakim El Hattab">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link rel="stylesheet" href="assets/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/css/reveal.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/theme/white.css" id="theme">
+
+	<!-- Code syntax highlighting -->
+	<link rel="stylesheet" href="assets/lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'assets/text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'assets/css/print/pdf.css' : 'assets/css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+
+	<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+
+	<div class="reveal">
+
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+
+			<!-- Slide 1 -->
+			<section style="text-align: center;">
+				<h1>JavaScript</h1>
+				<h4>Workshop</h4>
+				<img src="assets/img/js.png" alt="js" style="border:none; box-shadow:none; width:300px; height:300px;">
+				<p>
+					<img src="assets/img/lg.png" alt="logo" style="border:none; box-shadow:none;" /><br />
+					<small><a href="#" target="_blank">Tanja Stojanovska</a> & <a href="#" target="_blank">Aleksandar Manasiev</a>
+					</small></br>
+
+				</p>
+				<p style="font-size: 15px;">© 2021 Seavus Education &amp; Development Center</p>
+			</section>
+
+			<!-- Slide 2 -->
+			<section style="text-align: center;">
+				<h4>Exercise level 1</h4>
+				<p>
+					Create a javascript function which will accept an array of numbers as input and insert dashes (-) between each two even numbers.
+					Make sure to implement validation of the input array.					
+
+				</p>
+				<p>Example: if you accept [0,2,5,4,6,8] the output should be [0,-,2,5,4,-,6,-,8].</p>
+				
+			</section>
+			<section style="text-align: center;">
+				<h3>Exercise level 2</h3>
+				<p>Create an ATM machine. Use objects. The ATM has property balance. Initialize it with some value.
+<ul>
+<li>The ATM should have the following functionalities:</li>
+<li>- make deposit (this function should add money to the balance)</li>
+<li>- make withdrawal (this function should  withdraw money)</li>
+<li>- get the balance (this function should display the current balance)</li>
+<li>-display interactive menu using prompt (1 -> get balance, 2-> make deposit, 3 -> withdrawal, 4 - exit).</li>
+</ul>				
+</p>
+<p><b>Bonus: Use dom elements and events (ex. select, input, buttons..)</b></p>
+			</section>
+			<section style="text-align: center;">
+				<h4>Exercise level 3</h4>
+				<p>Create an interactive web app for displaying Star Wars people and ships.The app should look like the given image.</p>
+				<p>When you click on the cosmonaut image, the people should be displayed. Implement next and previous
+				button functionalities. Use the following url https://swapi.dev/api/people/?page=1.</p>
+				<p>When you click on the rocket image, the ships should be displayed. Implement next and previous
+				button functionalities. Use the following url https://swapi.dev/api/starships/?page=1.</p>
+				<p><small>Hint: for getting the previous and next page of data, you can use the properties from the ajax result,
+				instead of manually updating page value.</small></p>
+			</section>
+			<section style="text-align: center;">
+				
+				<p>If you are having COSR problem with swapi first try  adding 
+<pre>
+mode: "no-cors",
+headers: {
+        "Access-Control-Allow-Origin": "*",
+      }
+</pre>
+when making the ajax call. 
+Else try pokeapi and implement click on the cosmonaut image. https://pokeapi.co/api/v2/pokemon?offset=0&limit=10. Here 0 means skip 0 results and return the first 10, if offset is 10 skip 10 results and return the next 10 etc. manipulate the offset or use the next and previous properties in the result to
+ get the links that should be hit on next and previous buttons.</p>
+			</section>
+			<section>
+			<h4>Initial look</h4>
+			 <img src="./assets/img/initialLook.png" class="center small pointer">
+			</section>
+			<section>
+			<h4>People display</h4>
+			 <img src="./assets/img/peopleDisplay.png" class="center small pointer">
+			</section>
+			<section>
+			<h4>Ships display</h4>
+			 <img src="./assets/img/shipsDisplay.png" class="center small pointer">
+			</section>
+			
+		</div>
+
+	</div>
+
+	<script src="assets/lib/js/head.min.js"></script>
+	<script src="assets/js/reveal.js"></script>
+
+	<script>
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
+
+			transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+			// Transition speed
+			transitionSpeed: 'default', // default/fast/slow
+
+			// Enable slide navigation via mouse wheel
+			mouseWheel: true,
+
+			// Optional reveal.js plugins
+			dependencies: [{
+				src: 'assets/lib/js/classList.js',
+				condition: function () {
+					return !document.body.classList;
+				}
+			},
+			{
+				src: 'assets/plugin/markdown/marked.js',
+				condition: function () {
+					return !!document.querySelector('[data-markdown]');
+				}
+			},
+			{
+				src: 'assets/plugin/markdown/markdown.js',
+				condition: function () {
+					return !!document.querySelector('[data-markdown]');
+				}
+			},
+			{
+				src: 'assets/plugin/highlight/highlight.js',
+				async: true,
+				condition: function () {
+					return !!document.querySelector('pre code');
+				},
+				callback: function () {
+					hljs.initHighlightingOnLoad();
+				}
+			},
+			{
+				src: 'assets/plugin/zoom-js/zoom.js',
+				async: true
+			},
+			{
+				src: 'assets/plugin/notes/notes.js',
+				async: true
+			}
+			]
+		});
+	</script>
+
+</body>
+
+</html>
