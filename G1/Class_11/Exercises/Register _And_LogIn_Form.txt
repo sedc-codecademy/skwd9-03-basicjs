@@ -5,3 +5,38 @@ We need to create a whole register and login form with HTML, CSS and Javascript.
 We are free to use vanilla JS or jQuery for the javascript part. 
 
 We can also use Bootstrap as CSS library to make the form look better.
+
+We have two roles:
+- Admin - username, password, isAdmin = true
+- User - username, password, isAdmin = false
+
+We create the admin user hardcoded.
+
+
+Register form:
+
+- Username input
+- Password input
+We can register only if our username is unique.
+Password should be hidden.
+We should have confirm password field.
+
+Login form:
+- username input
+- password input
+
+Before we login we need to be registered.
+
+
+
+When Admin is logged in:
+
+- We just display other users 
+Extra:
+We add edit and delete buttons next to each user.
+When edit is clicked there are two inputs with user's username and password. There is a save bbutton to save the changed username and password
+When delte is clicked we delete the user and remove it from the HTML. 
+
+When regular user is logged in:
+
+- We just display other users without buttons
