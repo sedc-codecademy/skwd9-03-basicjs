@@ -2,6 +2,7 @@
 
 ## Rules, Info & Common Q&A:
 
+<<<<<<< Updated upstream
 0. This is not an official test, even though it will be done in a similar way so that the academy (the trainer and assistant as representatives) would be able to see your progress during this course and take that in consideration for the Advanced JavaScript course.
 1. **Do not use Higher Order Functions** like .split(), .join(), .filter(), .reduce() or any other we haven't used in during this course. If you do, the whole task will be considered as invalid, as that would mean using a shortcut and missing the point of the task.
 2. jQuery is not banned but it would be more appreciated if you use plain JavaScript.
@@ -24,12 +25,36 @@ Send finished work to:
 - Ivo Kostovski - ivo.kostovski@gmail.com
 - Ivan Lazarevski - ivan.lazarevski@seavus.com
 
+=======
+0. This is not an official test, even though it will be done in a similar way so that the academy (the trailer and assistant as representatives) would be able to see your progress during this course and take that in consideration for the Advanced JavaScript course.
+1. Do not use Higher Order Functions like .split(), .join(), .filter(), .reduce() or any other we haven't used in during this course. If you do, the whole task will be considered as invalid, as that would mean using a shortcut and missing the point of the task.
+2. jQuery is not banned but it would be more appreciated if you use plain JavaScript.
+3. Feel free to use google or any other website as much as needed to do the tasks.
+4. Consulting colleagues is not prohibited, but try to do your own task without copying someone elses work. There is huge difference in consulting and just copying. Copied code is easily noticeable (just like in the homeworks) and if seen, we will compare time of submission between the students.
+5. HTML and CSS are not necessary for completing these tasks, you should only use JavaScript.
+6. In these cases we are not worried about having global score functions, so the main goal is just getting the proper result in most efficient way possible (but still considering rule no. 1)
+7. Using function parameters is optional, feel free to decide if you should use it somewhere or not.
+8. The three dot's represent place where code should be written or they should be removed.
+9. The correct solutions will be added on our groups github repo after all students from each group have finished the tasks.
+10. The Trainer and Assistant can help you and answer questions but can't provide solutions or major hints for the tasks.
+11. Finished tasks should not be shared publicly in the chat.
+12. The already written code for each task is just a placeholder to help you start, if you think is not right, feel free to remove it completely.
+13. There are no official breaks, come and go as you please. The trainer and assistant will coordinate to make sure at least one person is always available for answering questions.
+14. You should send us your code by github when you are done or when the class ends at 12.30. Do not change anything afterwards, no commits after 12.45 will be considered in the feedback. You can add all the code in a single file or have multiple, as you wish, just make a clear distinction of which task is which.
+
+There is no need for stressing out, as there will be no grades, just feedback similar to what you get for the submitted homeworks. Also there is no passing and failing. Try to do your best and send us your work even if it is not finished.
+
+>>>>>>> Stashed changes
 ## Tasks:
 
 ### Exercise 1 - Map numbers to string with dash:
 
 Create a function which accepts an array of numbers as parameter and inserts dashes (-) between EACH two EVEN numbers.
+<<<<<<< Updated upstream
 Example: When called with 0,2,5,4,6,8 the output should be 0-254-6-8 (as a string).
+=======
+Example: When called with 0,2,5,4,6,8 the output should be 0-254-6-8.
+>>>>>>> Stashed changes
 
 ```
 let array = [0, 2, 5, 4, 6, 8];
